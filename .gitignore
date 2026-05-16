@@ -2,6 +2,10 @@
 data/
 data_org/
 .history/
+runs/
+artifacts/
+models/
+outputs/
 
 # Model weights and binary artifacts
 *.pt

@@ -1,0 +1,7 @@
+{
+  "base_dir": "/home/hiromu/energy/data/1104_test",
+  "model_path": "/home/hiromu/energy/YOLO/0708_maesyori/datasets/train/weights/best.pt",
+  "target_folders": ["A", "B", "C"],
+  "area_threshold": 50000,
+  "max_workers": 2
+}

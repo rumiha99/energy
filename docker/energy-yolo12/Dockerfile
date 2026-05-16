@@ -46,8 +46,6 @@ RUN pip install timm
 
 RUN pip install opencv-python
 
-RUN pip3 install --no-cache-dir google-generativeai
-
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt install -y nodejs
 

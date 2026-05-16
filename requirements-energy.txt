@@ -1,0 +1,17 @@
+torch
+torchvision
+ultralytics
+opencv-python
+numpy
+pandas
+scipy
+matplotlib
+japanize-matplotlib
+scikit-learn
+joblib
+optuna
+timm
+Pillow
+seaborn
+cupy
+ocrd-fork-pylsd==0.0.3

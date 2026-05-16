@@ -4,8 +4,8 @@
 
 - Docker 作業ディレクトリ: `/home/hiromu/energy`
 - Docker Compose: `/home/hiromu/energy/docker/energy-yolo12/docker-compose.yml`
-- GitHub 連携済みリポジトリ: `/home/hiromu/energy/src`
-- GitHub remote: `https://github.com/rumiha99/src.git`
+- GitHub 連携済みリポジトリ: `/home/hiromu/energy`
+- GitHub remote: `https://github.com/rumiha99/energy.git`
 
 ## 起動
 
@@ -19,11 +19,11 @@ docker exec -it yolo12 bash
 
 ## GitHub と連携する範囲
 
-現状では `/home/hiromu/energy` 全体ではなく、`/home/hiromu/energy/src` が Git リポジトリ。
-大きな画像、動画、学習済み重み、CSV、Notebook 出力は Git に入れない。
+`/home/hiromu/energy` 全体を Git リポジトリとして扱う。
+大きな画像、動画、学習済み重み、CSV、実験出力は Git に入れない。
 
 ```bash
-cd /home/hiromu/energy/src
+cd /home/hiromu/energy
 git status
 git add <変更したファイル>
 git commit -m "message"
@@ -44,16 +44,16 @@ python tune.py --config configs/search_space.yaml
 推奨構成:
 
 ```text
-src/
-  configs/
-    train.yaml
-    search_space.yaml
-  scripts/
-    train.py
-    evaluate.py
-    tune_optuna.py
-  runs/              # Git 管理しない
-  artifacts/         # Git 管理しない
+configs/
+  train.json
+  search_space.json
+scripts/
+  train.py
+  evaluate.py
+  tune_optuna.py
+runs/              # Git 管理しない
+artifacts/         # Git 管理しない
+models/            # Git 管理しない
 ```
 
 `tune_optuna.py` が行う処理:
@@ -70,12 +70,12 @@ src/
 /home/hiromu/energy/src の all_fast/pipeline_full.py を読んで、
 AREA_THRESHOLD, hida の n, T, SVM の C/gamma を Optuna で探索できる
 scripts/tune_optuna.py を作って。
-既存ファイルは壊さず、設定は configs/search_space.yaml に分離して。
+既存ファイルは壊さず、設定は configs/search_space.json に分離して。
 実行方法と出力ファイルも README に追記して。
 ```
 
 ## 注意
 
 - API キーは `docker-compose.yml` に直書きしない。
-- 大容量データや `.pt`, `.pkl`, `.csv`, `.ipynb` 出力は GitHub に入れない。
+- 大容量データや `.pt`, `.pkl`, `.csv`, 画像、動画、実験出力は GitHub に入れない。
 - 実験結果は `runs/` に保存し、最終的なコードと設定だけ GitHub に commit する。
