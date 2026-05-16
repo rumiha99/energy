@@ -119,6 +119,14 @@ python src/FF/AFF/gakusyu/cbam_full_from_images.py --mode export-features
 この完全版では、CSV は `filename`, `category`, `Label` による分割リストとして使い、
 `h0`-`h7`, `size_count`, `R` は `mask/` と `combined/` の画像から再計算する。
 
+パラメータ・融合方法・一部モデル構造を継続探索する入口:
+
+```bash
+python scripts/tune_cbam_full_from_images.py --deadline 2026-05-18T08:00:00
+```
+
+探索結果は `runs/cbam_tuning/` に trial ごとに保存する。
+
 ## 推奨ディレクトリ
 
 ```text
