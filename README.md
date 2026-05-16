@@ -74,10 +74,10 @@ python scripts/run_preprocess_yolo.py --config configs/preprocess_yolo.json
 
 ### CBAM/ConvNeXt 完全版
 
-最新の Notebook 実装は以下。
+元になった Notebook 実装は archive に退避済み。
 
 ```text
-src/FF/AFF/gakusyu/CBAM_check.ipynb
+archive/notebooks/FF_AFF_gakusyu/CBAM_check.ipynb
 ```
 
 その「CNNで使用するデータ直し」以降を、画像から特徴量まで再計算する形でまとめた完全版:
@@ -128,6 +128,8 @@ runs/         実験結果、ログ、metrics。Git 管理しない
 models/       学習済み重み。Git 管理しない
 artifacts/    中間生成物。Git 管理しない
 src/          既存研究コード
+archive/      旧実験コード、旧 Notebook
+docs/         整理方針、棚卸しメモ
 docker/       Docker 環境
 ```
 
