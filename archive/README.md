@@ -18,3 +18,27 @@
 src/FF/AFF/gakusyu/cbam_full_from_images.py
 ```
 
+## legacy_models/deeplerning_model_notebooks
+
+`src/deeplerning_model/` にあった旧モデル比較 Notebook 群です。
+
+重み、CSV、画像などの重い生成物は `src/deeplerning_model/` に残している。必要性が確認できるまでは削除しない。
+
+## misc
+
+一時コード、研究外メモ、単発確認コードを退避する場所です。
+
+- `not_kenkyu/`
+- `tekito/`
+
+## recovered
+
+復元された Notebook や復旧作業由来のファイルを退避する場所です。
+
+- `hukkyu/`
+
+## samples
+
+小さな確認用サンプル画像などを退避する場所です。
+
+- `test_hozon/`

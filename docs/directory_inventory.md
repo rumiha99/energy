@@ -39,9 +39,9 @@
 | Path | 役割 | 方針 |
 | --- | --- | --- |
 | `archive/notebooks/FF_AFF_gakusyu/` | `gakusyu` 直下から退避した旧 Notebook | 比較・復元用に保持。 |
-| `hukkyu/` | 復元 Notebook 群 | 中身確認後に archive へ移動または削除候補。 |
-| `test_hozon/` | 一時保存と思われる | 中身確認後に archive へ移動または削除候補。 |
-| `src/not_kenkyu/` | 研究外メモ | archive または削除候補。 |
-| `src/tekito/` | 一時コード | archive または削除候補。 |
-| `src/deeplerning_model/` | 旧モデル比較 | 比較資料として archive 候補。 |
-
+| `archive/recovered/hukkyu/` | 復元 Notebook 群 | 比較・復元用に保持。 |
+| `archive/samples/test_hozon/` | 一時保存サンプル画像 | 小さいため保持。 |
+| `archive/misc/not_kenkyu/` | 研究外メモ | 比較・復元用に保持。 |
+| `archive/misc/tekito/` | 一時コード | 比較・復元用に保持。 |
+| `archive/legacy_models/deeplerning_model_notebooks/` | 旧モデル比較 Notebook | 比較・復元用に保持。 |
+| `src/deeplerning_model/` | 旧モデル比較の重み・結果画像・CSV | 約 8GB。削除判断待ち。 |
