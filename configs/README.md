@@ -11,3 +11,4 @@
 現在の入口:
 
 - `preprocess_yolo.json`: YOLO セグメンテーション前処理用
+- `cbam_full_from_images.json`: CBAM/ConvNeXt 完全版。画像から h0-h7, size_count, R を再計算して学習・評価する

@@ -72,6 +72,53 @@ python scripts/run_preprocess_yolo.py --config configs/preprocess_yolo.json
 
 実行結果のメタデータは `runs/preprocess_yolo_YYYYMMDD_HHMMSS/` に保存する。
 
+### CBAM/ConvNeXt 完全版
+
+最新の Notebook 実装は以下。
+
+```text
+src/FF/AFF/gakusyu/CBAM_check.ipynb
+```
+
+その「CNNで使用するデータ直し」以降を、画像から特徴量まで再計算する形でまとめた完全版:
+
+```text
+src/FF/AFF/gakusyu/cbam_full_from_images.py
+```
+
+設定:
+
+```text
+configs/cbam_full_from_images.json
+```
+
+画像から特徴量を 1 件だけ計算して確認:
+
+```bash
+python src/FF/AFF/gakusyu/cbam_full_from_images.py --mode dry-run --limit 1
+```
+
+学習:
+
+```bash
+python src/FF/AFF/gakusyu/cbam_full_from_images.py --mode train
+```
+
+評価:
+
+```bash
+python src/FF/AFF/gakusyu/cbam_full_from_images.py --mode eval
+```
+
+特徴量だけ CSV に書き出す:
+
+```bash
+python src/FF/AFF/gakusyu/cbam_full_from_images.py --mode export-features
+```
+
+この完全版では、CSV は `filename`, `category`, `Label` による分割リストとして使い、
+`h0`-`h7`, `size_count`, `R` は `mask/` と `combined/` の画像から再計算する。
+
 ## 推奨ディレクトリ
 
 ```text

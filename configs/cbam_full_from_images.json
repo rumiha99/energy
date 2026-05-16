@@ -1,0 +1,23 @@
+{
+  "img_root": "/home/hiromu/energy/data/1201_humomentstest",
+  "train_csv": "/home/hiromu/energy/src/FF/AFF/dataset_upsamp/train_max_upsampled.csv",
+  "val_csv": "/home/hiromu/energy/src/FF/AFF/dataset_upsamp/val_fixed.csv",
+  "test_csv": "/home/hiromu/energy/src/FF/AFF/dataset_upsamp/test_fixed.csv",
+  "save_dir": "/home/hiromu/energy/runs/cbam_full_from_images",
+  "num_classes": 3,
+  "epochs": 100,
+  "batch_size": 16,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.05,
+  "use_scheduler": false,
+  "cnn_inner_dropout": 0.2,
+  "projector_dropout": 0.2,
+  "classifier_dropout": 0.3,
+  "pretrained": true,
+  "hida_n": 9,
+  "hida_t": 0.4,
+  "hida_method": "45rotate",
+  "num_workers": 0,
+  "seed": 42,
+  "feature_cache": "/home/hiromu/energy/runs/cbam_full_from_images/feature_cache.json"
+}
