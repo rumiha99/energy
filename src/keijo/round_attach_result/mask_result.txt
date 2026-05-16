@@ -1,0 +1,13 @@
+Folder: mask
+File: IMG_1625.jpg, Center: (93, 82), Radius: 96, IoU: 0.85
+File: IMG_1618.jpg, Center: (111, 125), Radius: 127, IoU: 0.90
+File: IMG_1620.jpg, Center: (112, 104), Radius: 117, IoU: 0.88
+File: IMG_1616.jpg, Center: (139, 136), Radius: 141, IoU: 0.86
+File: IMG_1624.jpg, Center: (99, 119), Radius: 111, IoU: 0.90
+File: IMG_1622.jpg, Center: (89, 103), Radius: 95, IoU: 0.82
+File: IMG_1617.jpg, Center: (133, 127), Radius: 132, IoU: 0.92
+File: IMG_1627.jpg, Center: (106, 108), Radius: 108, IoU: 0.90
+File: IMG_1621.jpg, Center: (97, 111), Radius: 104, IoU: 0.90
+File: IMG_1623.jpg, Center: (94, 111), Radius: 110, IoU: 0.84
+File: IMG_1626.jpg, Center: (101, 102), Radius: 118, IoU: 0.79
+File: IMG_1619.jpg, Center: (100, 116), Radius: 121, IoU: 0.94

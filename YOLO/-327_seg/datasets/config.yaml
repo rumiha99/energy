@@ -1,0 +1,9 @@
+path:  /home/YOLO/-327_seg/datasets/images/
+train: -327_seg
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake

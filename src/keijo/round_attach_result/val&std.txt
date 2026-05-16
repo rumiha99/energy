@@ -1,0 +1,144 @@
+File: IMG_1625.jpg
+Direction 上: (y, x) = (7, 82), Distance = 75.80
+Direction 下: (y, x) = (157, 82), Distance = 75.80
+Direction 左: (y, x) = (93, 4), Distance = 89.68
+Direction 右: (y, x) = (93, 190), Distance = 97.62
+Direction 左上: (y, x) = (40, 29), Distance = 76.55
+Direction 右上: (y, x) = (14, 161), Distance = 96.17
+Direction 左下: (y, x) = (148, 27), Distance = 93.34
+Direction 右下: (y, x) = (161, 150), Distance = 97.42
+Variance of distances: 88.45
+Standard deviation of distances: 9.40
+
+File: IMG_1618.jpg
+Direction 上: (y, x) = (6, 125), Distance = 119.82
+Direction 下: (y, x) = (239, 125), Distance = 114.86
+Direction 左: (y, x) = (111, 8), Distance = 103.95
+Direction 右: (y, x) = (111, 239), Distance = 128.76
+Direction 左上: (y, x) = (32, 46), Distance = 113.46
+Direction 右上: (y, x) = (34, 202), Distance = 128.69
+Direction 左下: (y, x) = (216, 20), Distance = 128.69
+Direction 右下: (y, x) = (201, 215), Distance = 128.81
+Variance of distances: 78.28
+Standard deviation of distances: 8.85
+
+File: IMG_1620.jpg
+Direction 上: (y, x) = (6, 104), Distance = 98.33
+Direction 下: (y, x) = (220, 104), Distance = 116.28
+Direction 左: (y, x) = (112, -1), Distance = 113.28
+Direction 右: (y, x) = (112, 207), Distance = 95.34
+Direction 左上: (y, x) = (34, 26), Distance = 110.89
+Direction 右上: (y, x) = (27, 189), Distance = 108.89
+Direction 左下: (y, x) = (183, 33), Distance = 111.72
+Direction 右下: (y, x) = (189, 181), Distance = 109.48
+Variance of distances: 46.94
+Standard deviation of distances: 6.85
+
+File: IMG_1616.jpg
+Direction 上: (y, x) = (11, 136), Distance = 125.04
+Direction 下: (y, x) = (274, 136), Distance = 138.03
+Direction 左: (y, x) = (139, 14), Distance = 125.04
+Direction 右: (y, x) = (139, 274), Distance = 135.03
+Direction 左上: (y, x) = (59, 56), Distance = 113.22
+Direction 右上: (y, x) = (38, 237), Distance = 138.59
+Direction 左下: (y, x) = (229, 46), Distance = 131.52
+Direction 右下: (y, x) = (236, 233), Distance = 137.24
+Variance of distances: 68.47
+Standard deviation of distances: 8.27
+
+File: IMG_1624.jpg
+Direction 上: (y, x) = (9, 119), Distance = 111.80
+Direction 下: (y, x) = (225, 119), Distance = 107.87
+Direction 左: (y, x) = (99, -1), Distance = 101.98
+Direction 右: (y, x) = (99, 185), Distance = 88.29
+Direction 左上: (y, x) = (25, 45), Distance = 108.41
+Direction 右上: (y, x) = (52, 166), Distance = 94.75
+Direction 左下: (y, x) = (195, 23), Distance = 107.48
+Direction 右下: (y, x) = (160, 180), Distance = 90.79
+Variance of distances: 70.64
+Standard deviation of distances: 8.40
+
+File: IMG_1622.jpg
+Direction 上: (y, x) = (8, 103), Distance = 96.03
+Direction 下: (y, x) = (199, 103), Distance = 97.02
+Direction 左: (y, x) = (89, 5), Distance = 85.16
+Direction 右: (y, x) = (89, 176), Distance = 88.12
+Direction 左上: (y, x) = (29, 43), Distance = 87.13
+Direction 右上: (y, x) = (45, 147), Distance = 82.02
+Direction 左下: (y, x) = (159, 33), Distance = 79.20
+Direction 右下: (y, x) = (146, 160), Distance = 83.01
+Variance of distances: 35.96
+Standard deviation of distances: 6.00
+
+File: IMG_1617.jpg
+Direction 上: (y, x) = (5, 127), Distance = 122.15
+Direction 下: (y, x) = (234, 127), Distance = 107.17
+Direction 左: (y, x) = (133, 3), Distance = 130.14
+Direction 右: (y, x) = (133, 267), Distance = 134.13
+Direction 左上: (y, x) = (43, 37), Distance = 127.56
+Direction 右上: (y, x) = (37, 223), Distance = 127.28
+Direction 左下: (y, x) = (213, 47), Distance = 121.62
+Direction 右下: (y, x) = (214, 208), Distance = 114.87
+Variance of distances: 66.67
+Standard deviation of distances: 8.17
+
+File: IMG_1627.jpg
+Direction 上: (y, x) = (5, 108), Distance = 103.02
+Direction 下: (y, x) = (203, 108), Distance = 95.02
+Direction 左: (y, x) = (106, -1), Distance = 107.02
+Direction 右: (y, x) = (106, 216), Distance = 110.02
+Direction 左上: (y, x) = (33, 35), Distance = 103.28
+Direction 右上: (y, x) = (34, 180), Distance = 104.65
+Direction 左下: (y, x) = (179, 35), Distance = 100.41
+Direction 右下: (y, x) = (173, 175), Distance = 94.79
+Variance of distances: 25.22
+Standard deviation of distances: 5.02
+
+File: IMG_1621.jpg
+Direction 上: (y, x) = (9, 111), Distance = 102.96
+Direction 下: (y, x) = (215, 111), Distance = 104.94
+Direction 左: (y, x) = (97, 9), Distance = 89.11
+Direction 右: (y, x) = (97, 185), Distance = 89.11
+Direction 左上: (y, x) = (33, 47), Distance = 92.65
+Direction 右上: (y, x) = (43, 165), Distance = 96.17
+Direction 左下: (y, x) = (185, 23), Distance = 104.65
+Direction 右下: (y, x) = (165, 179), Distance = 98.18
+Variance of distances: 37.79
+Standard deviation of distances: 6.15
+
+File: IMG_1623.jpg
+Direction 上: (y, x) = (2, 111), Distance = 110.32
+Direction 下: (y, x) = (221, 111), Distance = 111.31
+Direction 左: (y, x) = (94, 11), Distance = 84.72
+Direction 右: (y, x) = (94, 196), Distance = 103.41
+Direction 左上: (y, x) = (29, 46), Distance = 95.02
+Direction 右上: (y, x) = (39, 166), Distance = 101.82
+Direction 左下: (y, x) = (183, 22), Distance = 101.82
+Direction 右下: (y, x) = (158, 175), Distance = 93.65
+Variance of distances: 68.82
+Standard deviation of distances: 8.30
+
+File: IMG_1626.jpg
+Direction 上: (y, x) = (14, 102), Distance = 88.01
+Direction 下: (y, x) = (207, 102), Distance = 105.00
+Direction 左: (y, x) = (101, -1), Distance = 102.00
+Direction 右: (y, x) = (101, 188), Distance = 87.01
+Direction 左上: (y, x) = (37, 38), Distance = 90.52
+Direction 右上: (y, x) = (17, 186), Distance = 120.21
+Direction 左下: (y, x) = (186, 17), Distance = 118.79
+Direction 右下: (y, x) = (158, 159), Distance = 80.62
+Variance of distances: 195.13
+Standard deviation of distances: 13.97
+
+File: IMG_1619.jpg
+Direction 上: (y, x) = (4, 116), Distance = 113.14
+Direction 下: (y, x) = (232, 116), Distance = 117.10
+Direction 左: (y, x) = (100, -1), Distance = 102.26
+Direction 右: (y, x) = (100, 220), Distance = 121.06
+Direction 左上: (y, x) = (26, 42), Distance = 107.07
+Direction 右上: (y, x) = (30, 186), Distance = 121.62
+Direction 左下: (y, x) = (199, 17), Distance = 117.38
+Direction 右下: (y, x) = (182, 198), Distance = 118.15
+Variance of distances: 41.08
+Standard deviation of distances: 6.41
+

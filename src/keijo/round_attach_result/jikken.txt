@@ -1,0 +1,17 @@
+
+IMG_1625.jpg : 14.16 cm^2 Result: CD
+IMG_1620.jpg : 21.13 cm^2 Result: AB
+IMG_1617.jpg : 28.18 cm^2 Result: AB
+IMG_1627.jpg : 18.99 cm^2 Result: CD
+IMG_1621.jpg : 17.39 cm^2 Result: CD
+IMG_1623.jpg : 18.18 cm^2 Result: CD
+IMG_1626.jpg : 18.50 cm^2 Result: CD
+IMG_1619.jpg : 24.33 cm^2 Result: AB
+IMG_1625.jpg : 4.62 cm^2 Result: CD
+IMG_1620.jpg : 6.89 cm^2 Result: CD
+IMG_1617.jpg : 9.19 cm^2 Result: CD
+IMG_1627.jpg : 6.20 cm^2 Result: CD
+IMG_1621.jpg : 5.67 cm^2 Result: CD
+IMG_1623.jpg : 5.93 cm^2 Result: CD
+IMG_1626.jpg : 6.04 cm^2 Result: CD
+IMG_1619.jpg : 7.94 cm^2 Result: CD

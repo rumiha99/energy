@@ -1,0 +1,12 @@
+File: IMG_1635.jpg
+Max_Diameter: 536.00
+Min_Diameter: 322.00
+File: IMG_1634.jpg
+Max_Diameter: 556.00
+Min_Diameter: 358.00
+File: IMG_1633.jpg
+Max_Diameter: 586.00
+Min_Diameter: 378.00
+File: IMG_1632.jpg
+Max_Diameter: 562.00
+Min_Diameter: 340.00

@@ -1,0 +1,36 @@
+# version: '3.3'
+
+# services:
+#   yolo12:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     container_name: 'yolo12'
+#     stdin_open: true
+#     tty: true
+#     volumes:
+#       - .:/home
+    
+#     gpus: all
+
+services:
+  yolo12:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'yolo12'
+    stdin_open: true
+    gpus: all
+    tty: true
+    # ここを修正
+    volumes:
+      - ../../:/home/hiromu/energy
+    # コンテナ起動時の初期ディレクトリを指定
+    working_dir: /home/hiromu/energy
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

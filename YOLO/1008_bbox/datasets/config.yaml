@@ -1,0 +1,9 @@
+path:  /home/YOLO/1008_bbox/datasets/images/
+train: 1008_bbox
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake_bbox

@@ -1,0 +1,9 @@
+path:  /home/YOLO/hukusuu_train/datasets/images/
+train: hukusuu_train
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake_bbox

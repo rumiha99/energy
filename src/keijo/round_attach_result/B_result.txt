@@ -1,0 +1,25 @@
+Folder: B
+File: IMG_1278.jpg, Center: (296, 307), Radius: 314, IoU: 0.89
+File: IMG_1314.jpg, Center: (326, 328), Radius: 326, IoU: 0.85
+File: IMG_1306.jpg, Center: (253, 242), Radius: 257, IoU: 0.88
+File: IMG_1279.jpg, Center: (335, 281), Radius: 339, IoU: 0.85
+File: IMG_1296.jpg, Center: (315, 324), Radius: 315, IoU: 0.88
+File: IMG_1305.jpg, Center: (255, 247), Radius: 260, IoU: 0.88
+File: IMG_1266.jpg, Center: (304, 286), Radius: 307, IoU: 0.91
+File: IMG_1294.jpg, Center: (320, 294), Radius: 324, IoU: 0.89
+File: IMG_1313.jpg, Center: (280, 238), Radius: 295, IoU: 0.86
+File: IMG_1297.jpg, Center: (295, 290), Radius: 309, IoU: 0.87
+File: IMG_1285.jpg, Center: (291, 290), Radius: 299, IoU: 0.80
+File: IMG_1269.jpg, Center: (347, 312), Radius: 347, IoU: 0.91
+File: IMG_1304.jpg, Center: (275, 255), Radius: 272, IoU: 0.85
+File: IMG_1267.jpg, Center: (311, 279), Radius: 310, IoU: 0.91
+File: IMG_1295.jpg, Center: (313, 315), Radius: 319, IoU: 0.89
+File: IMG_1287.jpg, Center: (299, 271), Radius: 301, IoU: 0.88
+File: IMG_1312.jpg, Center: (307, 273), Radius: 321, IoU: 0.83
+File: IMG_1315.jpg, Center: (289, 278), Radius: 305, IoU: 0.89
+File: IMG_1277.jpg, Center: (352, 426), Radius: 352, IoU: 0.82
+File: IMG_1286.jpg, Center: (289, 284), Radius: 307, IoU: 0.86
+File: IMG_1288.jpg, Center: (291, 265), Radius: 298, IoU: 0.86
+File: IMG_1268.jpg, Center: (317, 299), Radius: 322, IoU: 0.92
+File: IMG_1276.jpg, Center: (333, 318), Radius: 335, IoU: 0.89
+File: IMG_1303.jpg, Center: (241, 231), Radius: 244, IoU: 0.90

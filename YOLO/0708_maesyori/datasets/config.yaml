@@ -1,0 +1,9 @@
+path:  /home/YOLO/0708_maesyori/datasets/images/
+train: 0708_maesyori
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake

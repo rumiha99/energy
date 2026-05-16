@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+  pytorch_shiitake:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'shiitake'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/home
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: 1

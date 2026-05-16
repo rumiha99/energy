@@ -1,0 +1,5 @@
+Folder: mask
+File: IMG_1635.jpg, Center: (143, 134), Radius: 152, IoU: 0.80
+File: IMG_1634.jpg, Center: (120, 139), Radius: 142, IoU: 0.90
+File: IMG_1633.jpg, Center: (137, 149), Radius: 151, IoU: 0.89
+File: IMG_1632.jpg, Center: (132, 143), Radius: 152, IoU: 0.84

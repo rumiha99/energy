@@ -1,0 +1,12 @@
+Test Accuracy: 0.6319
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.63      0.83      0.72        48
+     Class 1       0.66      0.48      0.55        48
+     Class 2       0.61      0.58      0.60        48
+
+    accuracy                           0.63       144
+   macro avg       0.63      0.63      0.62       144
+weighted avg       0.63      0.63      0.62       144

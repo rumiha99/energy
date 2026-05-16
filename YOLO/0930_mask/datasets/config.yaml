@@ -1,0 +1,9 @@
+path:  /home/YOLO/0930_mask/datasets/images/
+train: 0930_mask
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake

@@ -1,0 +1,9 @@
+path:  /home/YOLO/0728_segmet/datasets/images/
+train: 0728_segmet
+val:   val
+test:  test
+
+nc: 1
+ 
+names:
+  0: shiitake

@@ -1,0 +1,57 @@
+# Large or generated data
+data/
+data_org/
+.history/
+
+# Model weights and binary artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
+*.h5
+*.whl
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.so
+
+# Images, video, and array/table outputs
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.bmp
+*.gif
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.npy
+*.npz
+*.csv
+*.tsv
+
+# Python and notebook generated files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# Logs and local environment
+*.log
+.env
+.venv/
+venv/
+.nested_git_backups/
+
+# Credentials
+kaggle/KAGGLE_CONFIG_DIR/
