@@ -127,6 +127,18 @@ python scripts/tune_cbam_full_from_images.py --deadline 2026-05-18T08:00:00
 
 探索結果は `runs/cbam_tuning/` に trial ごとに保存する。
 
+途中レビュー後に探索空間を絞る場合:
+
+```bash
+python scripts/tune_cbam_full_from_images.py --phase focused --deadline 2026-05-18T08:00:00
+```
+
+レビューと探索切り替えも自動化する場合:
+
+```bash
+python scripts/supervise_cbam_tuning.py --deadline 2026-05-18T08:00:00
+```
+
 ## 推奨ディレクトリ
 
 ```text

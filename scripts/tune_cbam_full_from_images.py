@@ -193,6 +193,10 @@ class TunableFusionModel(nn.Module):
 
 
 def sample_trial_params(trial: optuna.Trial, args: argparse.Namespace) -> dict[str, Any]:
+    if args.phase == "focused":
+        return sample_focused_trial_params(trial, args)
+    if args.phase == "exploit":
+        return sample_exploit_trial_params(trial, args)
     fusion_type = trial.suggest_categorical("fusion_type", ["gate", "concat", "sum", "image_only", "feature_only"])
     params = {
         "fusion_type": fusion_type,
@@ -219,6 +223,93 @@ def sample_trial_params(trial: optuna.Trial, args: argparse.Namespace) -> dict[s
         "hida_n": trial.suggest_categorical("hida_n", [5, 7, 9, 11]) if args.search_features else args.hida_n,
         "hida_t": trial.suggest_float("hida_t", 0.25, 0.6) if args.search_features else args.hida_t,
         "hida_method": trial.suggest_categorical("hida_method", ["45rotate", "top2average"]) if args.search_features else args.hida_method,
+        "seed": trial.suggest_int("seed", 1, 9999),
+    }
+    return params
+
+
+def sample_focused_trial_params(trial: optuna.Trial, args: argparse.Namespace) -> dict[str, Any]:
+    """Focused search after reviewing broad-search results.
+
+    Review notes from the first long run:
+    - `feature_only` and `image_only` were consistently weak.
+    - pretrained ConvNeXt with image+feature fusion was clearly better.
+    - B/C confusion dominated remaining test errors.
+    - strong augmentation plus CE loss produced the best test macro F1.
+    """
+    fusion_type = trial.suggest_categorical("fusion_type", ["gate", "concat"])
+    optimizer = trial.suggest_categorical("optimizer", ["adamw", "sgd"])
+    if optimizer == "adamw":
+        lr = trial.suggest_float("learning_rate", 1.5e-4, 9e-4, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 8e-4, 1.5e-1, log=True)
+    else:
+        lr = trial.suggest_float("learning_rate", 2e-4, 1.2e-3, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 5e-3, 1.2e-1, log=True)
+    params = {
+        "fusion_type": fusion_type,
+        "epochs": trial.suggest_int("epochs", max(args.min_epochs, 18), max(args.max_epochs, 55)),
+        "patience": trial.suggest_int("patience", 8, 16),
+        "batch_size": trial.suggest_categorical("batch_size", [8, 12, 16, 24]),
+        "learning_rate": lr,
+        "weight_decay": weight_decay,
+        "use_scheduler": trial.suggest_categorical("use_scheduler", [True, False]),
+        "optimizer": optimizer,
+        "loss": trial.suggest_categorical("loss", ["ce", "focal"]),
+        "focal_gamma": trial.suggest_float("focal_gamma", 1.0, 1.8),
+        "image_size": trial.suggest_categorical("image_size", [192, 224, 256, 288]),
+        "aug_strength": trial.suggest_categorical("aug_strength", ["strong", "light"]),
+        "cnn_inner_dropout": trial.suggest_float("cnn_inner_dropout", 0.02, 0.38),
+        "projector_dropout": trial.suggest_float("projector_dropout", 0.08, 0.38),
+        "classifier_dropout": trial.suggest_float("classifier_dropout", 0.05, 0.42),
+        "hc_hidden": trial.suggest_categorical("hc_hidden", [128, 256, 512]),
+        "fusion_hidden": trial.suggest_categorical("fusion_hidden", [512, 768, 1024]),
+        "gate_reduction": trial.suggest_categorical("gate_reduction", [4, 8, 16, 32]),
+        "gate_initial_prob": trial.suggest_float("gate_initial_prob", 0.35, 0.75),
+        "sum_alpha": 0.0,
+        "pretrained": True,
+        "hida_n": args.hida_n,
+        "hida_t": args.hida_t,
+        "hida_method": args.hida_method,
+        "seed": trial.suggest_int("seed", 1, 9999),
+    }
+    return params
+
+
+def sample_exploit_trial_params(trial: optuna.Trial, args: argparse.Namespace) -> dict[str, Any]:
+    """Narrow search around reviewed top performers."""
+    fusion_type = trial.suggest_categorical("fusion_type", ["gate", "concat"])
+    optimizer = trial.suggest_categorical("optimizer", ["adamw", "sgd"])
+    if optimizer == "adamw":
+        lr = trial.suggest_float("learning_rate", 3.0e-4, 8.5e-4, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 2.5e-3, 1.2e-1, log=True)
+    else:
+        lr = trial.suggest_float("learning_rate", 3.5e-4, 9.0e-4, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 1.5e-2, 9.0e-2, log=True)
+    params = {
+        "fusion_type": fusion_type,
+        "epochs": trial.suggest_int("epochs", max(args.min_epochs, 20), max(args.max_epochs, 60)),
+        "patience": trial.suggest_int("patience", 10, 18),
+        "batch_size": trial.suggest_categorical("batch_size", [8, 16, 24]),
+        "learning_rate": lr,
+        "weight_decay": weight_decay,
+        "use_scheduler": trial.suggest_categorical("use_scheduler", [True, False]),
+        "optimizer": optimizer,
+        "loss": "ce",
+        "focal_gamma": 1.2,
+        "image_size": trial.suggest_categorical("image_size", [192, 256, 288]),
+        "aug_strength": "strong",
+        "cnn_inner_dropout": trial.suggest_float("cnn_inner_dropout", 0.04, 0.36),
+        "projector_dropout": trial.suggest_float("projector_dropout", 0.12, 0.34),
+        "classifier_dropout": trial.suggest_float("classifier_dropout", 0.12, 0.38),
+        "hc_hidden": trial.suggest_categorical("hc_hidden", [128, 256]),
+        "fusion_hidden": trial.suggest_categorical("fusion_hidden", [512, 768, 1024]),
+        "gate_reduction": trial.suggest_categorical("gate_reduction", [8, 16, 32]),
+        "gate_initial_prob": trial.suggest_float("gate_initial_prob", 0.45, 0.75),
+        "sum_alpha": 0.0,
+        "pretrained": True,
+        "hida_n": args.hida_n,
+        "hida_t": args.hida_t,
+        "hida_method": args.hida_method,
         "seed": trial.suggest_int("seed", 1, 9999),
     }
     return params
@@ -384,6 +475,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--hida-method", default="45rotate", choices=["45rotate", "top2average"])
     parser.add_argument("--study-name", default="cbam_full_from_images_test_search")
     parser.add_argument("--max-trials", type=int, default=None)
+    parser.add_argument("--phase", choices=["broad", "focused", "exploit"], default="broad")
     return parser.parse_args()
 
 
@@ -404,6 +496,7 @@ def main() -> int:
         "started_at": datetime.now().isoformat(timespec="seconds"),
         "deadline": args.deadline,
         "objective": "maximize test macro F1; accuracy is also recorded",
+        "phase": args.phase,
         "base_config": str(args.config.resolve()),
         "output_dir": str(args.output_dir.resolve()),
     }
